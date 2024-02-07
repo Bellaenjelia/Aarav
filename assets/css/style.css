@@ -1,5 +1,5 @@
 /**
-* Template Name: Appland
+* Template Name: Aarav
 * Updated: Jan 09 2024 with Bootstrap v5.3.2
 * Template URL: https://bootstrapmade.com/free-bootstrap-app-landing-page-template/
 * Author: BootstrapMade.com
