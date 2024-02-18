@@ -47,8 +47,8 @@
               <li><a href="index.php?page=aduan">Aduan</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#pricing">Contact</a></li>
-          <li><a class="nav-link scrollto" href="#faq">F.A.Q</a></li>
+          <li><a class="nav-link scrollto" href="index.php?page=contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="index.php?page=faq">F.A.Q</a></li>
           
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -90,22 +90,17 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php?page=contact">Contact</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php?page=faq">FAQ</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php?page=konseling">Konseling</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php?page=aduan">Aduan</a></li>
             </ul>
           </div>
 
