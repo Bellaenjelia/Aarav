@@ -2,20 +2,20 @@
     <div class="container">
         <div class="row">
 
-        <div class="section-title">
+        <div class="section-title" data-aos="zoom-in">
             <h2>Frequently Ask Questions</h2>
             <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
             <div class="clearfix"></div>
 
-            <div class="col-lg-5 col-12">
+            <div class="col-lg-5 col-12" data-aos="fade-right">
                 <img src="assets/img/faq.jpg" class="img-fluid" alt="FAQs">
             </div>
 
             <div class="col-lg-6 col-12 m-auto">
                 <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
+                    <div class="accordion-item" data-aos="fade-left">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             What is Topic Listing?
@@ -29,7 +29,7 @@
                         </div>
                     </div>
 
-                    <div class="accordion-item">
+                    <div class="accordion-item" data-aos="fade-left">
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             How to find a topic?
@@ -43,7 +43,7 @@
                         </div>
                     </div>
 
-                    <div class="accordion-item">
+                    <div class="accordion-item" data-aos="fade-left">
                         <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             Does it need to paid?
