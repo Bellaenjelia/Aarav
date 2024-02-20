@@ -7,8 +7,8 @@
           <div>
             <h1><span class="fst-italic">Aarav</span> - Bimbingan Konseling dan Aduan</h1>
             <h2>Segera akses bimbingan konseling online untuk pelajar. Kami siap memberikan dukungan penuh di mana pun Anda berada.</h2>
-            <a href="#" class="download-btn"><i class='bx bxs-chat' ></i> Konseling</a>
-            <a href="#" class="download-btn"><i class='bx bxs-user-voice'></i> Aduan</a>
+            <a href="index.php?page=konseling" class="download-btn"><i class='bx bxs-chat' ></i> Konseling</a>
+            <a href="index.php?page=aduan" class="download-btn"><i class='bx bxs-user-voice'></i> Aduan</a>
           </div>
         </div>
         <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img" data-aos="fade-up">
