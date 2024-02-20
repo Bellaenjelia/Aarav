@@ -1,4 +1,4 @@
-<section>
+<section class="page">
 	<div class="container-fluid">
 		<div class="row row-cols-1 justify-content-center py-5">
 			<div class="col-xxl-7 mb-4">

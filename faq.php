@@ -1,4 +1,4 @@
-<section class="faq-section section-padding" id="section_4">
+<section class="faq-section section-padding page" id="section_4">
     <div class="container">
         <div class="row">
 

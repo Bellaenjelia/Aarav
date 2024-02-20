@@ -26,6 +26,9 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Chat CSS Files -->
+  <link rel="stylesheet" href="chat/css/style.css">
 </head>
 
 <body>
