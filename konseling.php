@@ -3,7 +3,7 @@
         <div class="card chat-card">
             <div class="card-body">
                 <div class="d-flex align-items-center">
-                    <a href="users.php" class="back-icon"><i class="bi bi-arrow-left"></i></a>
+                    <a href="index.php" class="back-icon"><i class="bi bi-arrow-left"></i></a>
                     <img src="assets/img/apple-touch-icon.png" alt="" width="40" height="40" class="rounded-circle ms-3 me-2">
                     <div class="details">
                         <span>Nama Guru</span>
