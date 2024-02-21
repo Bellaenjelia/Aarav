@@ -18,13 +18,13 @@
                     <div class="accordion-item" data-aos="fade-left">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            What is Topic Listing?
+                            Apa saja yang boleh saya ceritakan?
                             </button>
                         </h2>
 
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                Topic Listing is free Bootstrap 5 CSS template. <strong>You are not allowed to redistribute this template</strong> on any other template collection website without our permission. Please contact TemplateMo for more detail. Thank you.
+                                Pada dasarnya, kamu boleh bercerita tentang apapun. Tidak ada batasan, sampai ke hal yang paling personal sekalipun. Jangan malu! Cerita masalah-masalah terberatmu itu tindakan yang patut dikagumi, bukan menjadi sumber rasa malu
                             </div>
                         </div>
                     </div>
@@ -32,13 +32,13 @@
                     <div class="accordion-item" data-aos="fade-left">
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            How to find a topic?
+                            Apakah privasi saya akan terjamin?
                         </button>
                         </h2>
 
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                You can search on Google with <strong>keywords</strong> such as templatemo portfolio, templatemo one-page layouts, photography, digital marketing, etc.
+                                Pastinya. Privasimu adalah prioritas kami. Jangan takut, semua yang kamu bicarakan selama sesi konseling berjalan (termasuk identitasmu) akan 100% dijaga konfidensialitasnya.
                             </div>
                         </div>
                     </div>
