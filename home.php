@@ -1,84 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Aarav</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/Logo (2).png" rel="icon">
-  <link href="assets/img/Logo (2).png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Aarav
-  * Updated: Jan 09 2024 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/free-bootstrap-app-landing-page-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-</head>
-
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top  header-transparent ">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <div class="logo">
-        <h1><a href="index.html">Aarav</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      </div>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#features">Konseling</a></li>
-          <li><a class="nav-link scrollto" href="#gallery">Aduan</a></li>
-          <li><a class="nav-link scrollto" href="#pricing">contact us</a></li>
-          <li><a class="nav-link scrollto" href="#faq">F.A.Q</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
 
@@ -86,10 +5,10 @@
       <div class="row">
         <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
           <div>
-            <h1>Aarav - Bimbingan Konseling dan Aduan</h1>
-            <h2>Selamat Datang di Aplikasi Bimbingan Konseling dan Aduan Aarav. <br> Bimbingan konseling adalah proses pemberian bantuan kepada individu atau kelompok oleh ahli yang disebut konselor untuk menyelesaikan masalah yang sedang dihadapi melalui metode wawancara.</h2>
-            <a href="#" class="download-btn"><i class='bx bxs-chat' ></i> Konseling</a>
-            <a href="#" class="download-btn"><i class='bx bxs-user-voice'></i> Aduan</a>
+            <h1><span class="fst-italic">Aarav</span> - Bimbingan Konseling dan Aduan</h1>
+            <h2>Segera akses bimbingan konseling online untuk pelajar. Kami siap memberikan dukungan penuh di mana pun Anda berada.</h2>
+            <a href="index.php?page=konseling" class="download-btn"><i class='bx bxs-chat' ></i> Konseling</a>
+            <a href="index.php?page=aduan" class="download-btn"><i class='bx bxs-user-voice'></i> Aduan</a>
           </div>
         </div>
         <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img" data-aos="fade-up">
@@ -97,54 +16,53 @@
         </div>
       </div>
     </div>
-
   </section><!-- End Hero -->
 
   <main id="main">
 
-    <!-- ======= App Features Section ======= -->
-    <section id="features" class="features">
+    <!-- ======= Introduce Section ======= -->
+    <section class="introduce">
       <div class="container">
-
         <div class="row content">
           <div class="col pt-5 order-2 order-md-1 text-center" data-aos="fade-up">
-            
-            <p class="fst-italic">
-              Aarav adalah aplikasi berbasis website yang menyediakan jasa untuk bimbingan konseling dan aduan untuk siswa. Dengan Aarav guru dapat dengan mudah berinteraksi dengan murid. Siswa juga dapat menyembunyikan identitas nya jika ia merasa tidak percaya diri saat melakukan konseling ataupun siswa yang takut jika identitasnya diketahui saat melakukan aduan.
+            <div class="section-title">
+              <h2>Apa Itu <span class="fw-bold fst-italic">Aarav</span>?</h2>
+            </div>
+            <p>
+              <span class="fw-bold fst-italic">Aarav</span> adalah aplikasi berbasis <span class="fst-italic">website</span> yang menyediakan jasa bimbingan konseling dan aduan <span class="fst-italic">online</span> untuk siswa. <br>
+              Kata <span class="fw-bold fst-italic">Aarav</span> sendiri berasal dari bahasa sansekerta yang berarti kedamaian. <span class="fw-bold fst-italic">Aarav</span> juga merupakan terjemahan dari kata kebijaksanaan.
             </p>
             <p>
-              Aarav sendiri berasal dari bahasa sansekerta yang berarti <b>'kedamaian'</b>. Aarav mungkin juga merupakan terjemahan dari <b>'kebijaksanaan'</b>. 
-            </p>
-            <p>
-             Tujuan website ini adalah supaya siswa lebih berani lagi dalam mengungkapkan kebenaran dan mencurahkan isi hati mereka kepada guru BK
+              Tujuan dari <span class="fw-bold fst-italic">Aarav</span> ini adalah supaya siswa lebih berani lagi dalam mengungkapkan kebenaran dan mencurahkan isi hati mereka kepada guru BK.
+              Dengan <span class="fw-bold fst-italic">Aarav</span> guru dan siswa dapat dengan mudah berinteraksi. <span class="fw-bold fst-italic">Aarav</span> menjaga kerahasiaan identitas setiap siswa, sehingga siswa tidak perlu takut ataupun ragu saat melakukan konseling ataupun aduan.
             </p>
           </div>
         </div>
+      </div>
+    </section>
 
-
+    <!-- ======= App Features Section ======= -->
+    <section id="features" class="features section-bg">
+      <div class="container">
         <div class="section-title">
-          <h2>Aarav fitur</h2>
-          <p>Aarav sebagai aplikasi bimbingan konseling memeliki beberapa fitur yang bisa berguna untuk guru dan siswa</p>
+          <h2><span class="fw-bold fst-italic">Aarav</span> fitur</h2>
+          <p><span class="fw-bold fst-italic">Aarav</span> sebagai <span class="fst-italic">platform</span> bimbingan konseling <span class="fst-italic">online</span> memeliki beberapa fitur menarik yang berguna untuk guru dan siswa</p>
         </div>
 
         <div class="row no-gutters">
           <div class="col-xl-7 d-flex align-items-stretch order-2 order-lg-1">
             <div class="content d-flex flex-column justify-content-center">
               <div class="row">
-                <div class="col-md-6 icon-box" data-aos="fade-up">
-                  <i class="bx bx-receipt"></i>
-                  <h4>Bimbingan Konseling</h4>
-                  <p>Kalian bapat mendapatkan bimbingan dan koseling pada alikasi ini, dengan identitas yang bisa di rahasiakan</p>
+                <div class="col icon-box" data-aos="fade-up">
+                  <i class="bx bx-chat"></i>
+                  <h4>Konseling <span class="fst-italic">Online</span></h4>
+                  <p>Siswa dapat melakukan bimbingan dan koseling secara <span class="fst-italic">online</span> dengan identitas yang di rahasiakan</p>
                 </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                </div> 
                 <div class="row">
-                  <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                  </div> 
-                  <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                    <i class="bx bx-cube-alt"></i>
+                  <div class="col icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <i class='bx bxs-user-voice'></i>
                     <h4>Aduan</h4>
-                    <p>Fitur aduan Aarav bisa kalian gunakan untuk mengadukan perundungan ataupun pelanggaran yang dilakukan oleh siswa/siswi di sekolah</p>
+                    <p>Fitur aduan dapat digunakan untuk melaporkan perundungan ataupun pelanggaran yang dilakukan oleh siswa.</p>
                   </div>  
                 </div>
               </div>
@@ -167,19 +85,18 @@
             <img src="assets/img/details-1.png" class="img-fluid" alt="">
           </div>
           <div class="col-md-8 pt-4" data-aos="fade-up">
-            <h3>Mengapa harus menggunakan Aarav?</h3>
-            <p class="fst-italic">
-             Aarav merupakan aplikasi yang sangat menjaga identitas para penggunanya, sehingga pengguna bisa merasa aman dan damai saat melakukan bimbingan konseling ataupun melaporkan pelanggaran. 
-             Berikut adalah kelebihan kami
+            <h3>Mengapa harus menggunakan <span class="fst-italic">Aarav</span>?</h3>
+            <p>
+              <span class="fst-italic">Aarav</span> adalah aplikasi bimbingan konseling yang aman dan terpercaya. Berikut beberapa kelebihan kami :
             </p>
             <ul>
-              <li><i class="bi bi-check"></i> identitas terjamin aman dan bersifat rahasia</li>
-              <li><i class="bi bi-check"></i> Mudah melakukan bimbingan konseling kepada guru BK di sekolah</li>
-              <li><i class="bi bi-check"></i> Dapat melaporkan pelanggaran yang terjadi tanpa khawatir diketahui oleh pelanggar </li>
-              <li><i class="bi bi-check"></i> Guru dapat dengan mudah mendapatkan informasi dan bisa memberingan bimbingan kepada siswa</li>
+              <li><i class="bi bi-check"></i> Identitas terjamin aman dan bersifat rahasia</li>
+              <li><i class="bi bi-check"></i> Mudah melakukan bimbingan konseling kepada guru BK dimanapun</li>
+              <li><i class="bi bi-check"></i> Dapat melaporkan pelanggaran tanpa khawatir diketahui oleh pelanggar</li>
+              <li><i class="bi bi-check"></i> Guru dengan mudah mendapatkan informasi dan memberinkan bimbingan kepada siswa</li>
             </ul>
             <p>
-              Aarav bisa menjadi perantara terbaik antara guru dan siswa dengan beberapa fitur-fitur Aarav.
+              <span class="fst-italic">Aarav</span> dapat menjadi perantara terbaik antara guru dan siswa dengan beberapa fitur-fitur menarik.
             </p>
           </div>
         </div>
@@ -370,91 +287,3 @@
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-   
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Aarav</h3>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container py-4">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Aarav</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-app-landing-page-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
-</html>
