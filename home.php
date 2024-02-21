@@ -108,8 +108,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Gallery</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Bagaimana cara menjalankan Aarav?</h2>
+          <p>Berikut adalah langkah-langkah untuk menjalankan aplikasi Aarav </p>
         </div>
 
       </div>
@@ -142,7 +142,7 @@
 
         <div class="section-title">
           <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>berikut adalah tanggapan mereka tentang aplikasi Aarav</p>
         </div>
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -238,7 +238,7 @@
               <div class="col-lg-6 info">
                 <i class="bx bx-map"></i>
                 <h4>Address</h4>
-                <p>A108 Adam Street,<br>New York, NY 535022</p>
+                <p>Metro pusat,<br>Metro, Lampung</p>
               </div>
               <div class="col-lg-6 info">
                 <i class="bx bx-phone"></i>
@@ -248,7 +248,7 @@
               <div class="col-lg-6 info">
                 <i class="bx bx-envelope"></i>
                 <h4>Email Us</h4>
-                <p>contact@example.com<br>info@example.com</p>
+                <p>aarav@egmail.com.com<br></p>
               </div>
               <div class="col-lg-6 info">
                 <i class="bx bx-time-five"></i>
