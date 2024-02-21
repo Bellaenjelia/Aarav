@@ -24,7 +24,7 @@
 
                         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                Fitur konseling Aarav memungkinkan siswa untuk berinteraksi dengan guru untuk membahas masalah, mendapatkan arahan, dan mencari solusi untuk permasalahan yang dihadapi.
+                                Fitur konseling Aarav memungkinkan siswa untuk berinteraksi dengan guru malaui chat untuk membahas masalah, mendapatkan arahan, dan mencari solusi untuk permasalahan yang dihadapi.
                             </div>
                         </div>
                     </div>
