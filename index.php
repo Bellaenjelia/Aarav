@@ -41,7 +41,7 @@ include 'authentication/koneksi.php';
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <img src="assets/img/logo.png" alt="">
+        <img src="assets/img//aaravlogo.png" alt="">
       </div>
 
       <nav id="navbar" class="navbar">
@@ -85,11 +85,10 @@ include 'authentication/koneksi.php';
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Aarav</h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              Metro Pusat <br>
+              Lampung <br><br>
+              <strong>Phone:</strong> +62 9891 0230 09<br>
+              <strong>Email:</strong> aarav@gmailcom<br>
             </p>
           </div>
 

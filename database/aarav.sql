@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 07, 2024 at 08:56 AM
+-- Generation Time: Feb 21, 2024 at 07:26 AM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -67,6 +67,19 @@ CREATE TABLE `guru` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `kelas`
+--
+
+CREATE TABLE `kelas` (
+  `id_kelas` int(11) NOT NULL,
+  `kelas` enum('X','XI','XII') DEFAULT NULL,
+  `jurusan` varchar(255) DEFAULT NULL,
+  `id_guru` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pengelola`
 --
 
@@ -103,7 +116,7 @@ CREATE TABLE `siswa` (
   `nis` int(11) DEFAULT NULL,
   `nama` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
-  `kelas` varchar(255) DEFAULT NULL
+  `id_kelas` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -132,6 +145,13 @@ ALTER TABLE `guru`
   ADD PRIMARY KEY (`id_guru`);
 
 --
+-- Indexes for table `kelas`
+--
+ALTER TABLE `kelas`
+  ADD PRIMARY KEY (`id_kelas`),
+  ADD KEY `id_guru` (`id_guru`);
+
+--
 -- Indexes for table `pengelola`
 --
 ALTER TABLE `pengelola`
@@ -149,7 +169,8 @@ ALTER TABLE `percakapan`
 -- Indexes for table `siswa`
 --
 ALTER TABLE `siswa`
-  ADD PRIMARY KEY (`id_siswa`);
+  ADD PRIMARY KEY (`id_siswa`),
+  ADD KEY `id_kelas` (`id_kelas`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -172,6 +193,12 @@ ALTER TABLE `chat`
 --
 ALTER TABLE `guru`
   MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `kelas`
+--
+ALTER TABLE `kelas`
+  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `pengelola`
@@ -204,11 +231,23 @@ ALTER TABLE `chat`
   ADD CONSTRAINT `chat_ibfk_3` FOREIGN KEY (`id_percakapan`) REFERENCES `percakapan` (`id_percakapan`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Constraints for table `kelas`
+--
+ALTER TABLE `kelas`
+  ADD CONSTRAINT `kelas_ibfk_1` FOREIGN KEY (`id_guru`) REFERENCES `guru` (`id_guru`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `percakapan`
 --
 ALTER TABLE `percakapan`
   ADD CONSTRAINT `percakapan_ibfk_1` FOREIGN KEY (`id_guru`) REFERENCES `guru` (`id_guru`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `percakapan_ibfk_2` FOREIGN KEY (`id_siswa`) REFERENCES `siswa` (`id_siswa`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `siswa`
+--
+ALTER TABLE `siswa`
+  ADD CONSTRAINT `siswa_ibfk_1` FOREIGN KEY (`id_kelas`) REFERENCES `kelas` (`id_kelas`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
