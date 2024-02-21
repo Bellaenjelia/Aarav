@@ -1,5 +1,5 @@
 <!-- ======= Aduan Section ======= -->
-<section id="aduan" class="contact">
+<section id="aduan" class="contact page">
     <div class="container" data-aos="fade-up">
 
     <div class="section-title m-3">
