@@ -41,7 +41,7 @@ include 'authentication/koneksi.php';
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <img src="assets/img/logo.png" alt="">
+        <img src="assets/img//aaravlogo.png" alt="">
       </div>
 
       <nav id="navbar" class="navbar">
