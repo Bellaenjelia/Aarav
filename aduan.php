@@ -20,6 +20,14 @@ if (isset($_POST['bsimpan'])) {
 }
 ?>
 
+<style>
+    .aduan .text-center button{
+        background: none; padding:1rem; border-radius:1rem; border:1px solid #AAD9BB; margin-top:1.5rem; width:10rem; color:#637E76;
+    }
+    .aduan .text-center button:hover{
+        background: #C5FFF8;
+    }
+</style>
 
 <section id="aduan" class="aduan page">
     <div class="container" data-aos="fade-up">
