@@ -15,7 +15,6 @@ if (!isset($_SESSION['user'])) {
   <title>Aarav - Bimbingan Konseling dan Aduan</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
   <!-- Favicons -->
   <link href="assets/img/icon.png" rel="icon">
   <link href="assets/img/icon.png" rel="apple-touch-icon">
@@ -55,6 +54,7 @@ if (!isset($_SESSION['user'])) {
             <ul>
               <li><a href="index.php?page=konseling">Konseling</a></li>
               <li><a href="index.php?page=aduan">Aduan</a></li>
+              <li><a href="index.php?page=chat">chat</a></li>
             </ul>
           </li>
           <li><a class="nav-link" href="index.php?page=contact">Contact</a></li>
