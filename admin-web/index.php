@@ -363,15 +363,18 @@ if (!isset($_SESSION['user'])) {
                         </div><!-- /.card -->
                     </div>
                 </div>
-                <!-- /To Do and Live Chat -->
-                <!-- Calender Chart Weather  -->
-                
-                       
-            <!-- /#add-category -->
+            
+                <?php
+					$page = isset($_GET['page']) ? $_GET['page'] : 'home';
+					if(file_exists($page . '.php')){
+                        include $page . '.php';
+                    }else{
+                        include '404.php';
+                    }
+				?>
             </div>
-            <!-- .animated -->
+
         </div>
-        <!-- /.content -->
         <div class="clearfix"></div>
         <!-- Footer -->
         <footer class="site-footer">
