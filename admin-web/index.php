@@ -81,7 +81,7 @@ if (!isset($_SESSION['user'])) {
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="index.html"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                        <a href="../admin-web/index.php"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                     </li>
                     <li class="menu-title">UI elements</li><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
@@ -303,8 +303,17 @@ if (!isset($_SESSION['user'])) {
                                 </div>
                             </div>
                         </div>
+                        <?php
+                            $page = isset($_GET['page']) ? $_GET['page'] : 'home';
+                            if(file_exists($page . '.php')){
+                                include $page . '.php';
+                            }
+				        ?>
                     </div>
                 </div>
+
+                
+					
         <div class="clearfix"></div>
         <!-- Footer -->
         <footer class="site-footer">
