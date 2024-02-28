@@ -16,10 +16,16 @@ if (isset($_POST['login'])) {
   $username = $_POST['username'];
   $password = md5($_POST['password']);
 
-  $cek_guru = mysqli_query($koneksi, "SELECT*FROM guru WHERE id_guru = '$username' AND password = '$password'");
-  if (mysqli_num_rows($cek_guru) > 0) {
+  $cek_pengelola = mysqli_query($koneksi, "SELECT*FROM pengelola WHERE username = '$username' AND password = '$password'");
+  if (mysqli_num_rows($cek_pengelola) > 0) {
+      $_SESSION['user'] = mysqli_fetch_array($cek_pengelola);
+      echo '<script>alert("Login Berhasil, Selamat Datang!"); location.href="../admin-web/index.php"</script>';
+  } else {
+    $cek_guru = mysqli_query($koneksi, "SELECT*FROM guru WHERE id_guru = '$username' AND password = '$password'");
+
+    if (mysqli_num_rows($cek_guru) > 0) {
       $_SESSION['user'] = mysqli_fetch_array($cek_guru);
-      echo '<script>alert("Login Berhasil, Selamat Datang!"); location.href="../admin/index.php"</script>';
+      echo '<script>alert("Login Berhasil, Selamat Datang!"); location.href="../admin-web/index.php"</script>';
   } else {
       $cek_siswa = mysqli_query($koneksi, "SELECT*FROM siswa WHERE username = '$username' AND password = '$password'");
 
@@ -31,6 +37,8 @@ if (isset($_POST['login'])) {
       }
   }
 }
+}
+
 if (isset($_POST['register'])) {
   $username = $_POST['username'];
   $password = md5($_POST['password']);
