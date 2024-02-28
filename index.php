@@ -1,5 +1,9 @@
 <?php
 include 'authentication/koneksi.php';
+
+if (!isset($_SESSION['user'])) {
+  header('location:authentication/login.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,9 +57,9 @@ include 'authentication/koneksi.php';
               <li><a href="index.php?page=aduan">Aduan</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="index.php?page=contact">Contact</a></li>
-          <li><a class="nav-link scrollto" href="index.php?page=faq">F.A.Q</a></li>
-          
+          <li><a class="nav-link" href="index.php?page=contact">Contact</a></li>
+          <li><a class="nav-link" href="index.php?page=faq">F.A.Q</a></li>
+          <li><a class="getstarted" href="authentication/logout.php">Log out</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -75,8 +79,6 @@ include 'authentication/koneksi.php';
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-
-   
 
     <div class="footer-top">
       <div class="container">

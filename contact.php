@@ -14,22 +14,22 @@
             <div class="col-lg-6 info">
             <i class="bx bx-map"></i>
             <h4>Address</h4>
-            <p>A108 Adam Street,<br>New York, NY 535022</p>
+            <p>Metro, Lampung</p>
             </div>
             <div class="col-lg-6 info">
             <i class="bx bx-phone"></i>
             <h4>Call Us</h4>
-            <p>+1 5589 55488 55<br>+1 5589 22548 64</p>
+            <p>+1 5589 55488 55</p>
             </div>
             <div class="col-lg-6 info">
             <i class="bx bx-envelope"></i>
             <h4>Email Us</h4>
-            <p>contact@example.com<br>info@example.com</p>
+            <p>aarav@gmail.com.com<br></p>
             </div>
             <div class="col-lg-6 info">
             <i class="bx bx-time-five"></i>
             <h4>Working Hours</h4>
-            <p>Mon - Fri: 9AM to 5PM<br>Sunday: 9AM to 1PM</p>
+            <p>Mon - Fri: 7AM to 3PM</p>
             </div>
         </div>
         </div>
