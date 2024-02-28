@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 23, 2024 at 02:28 PM
+-- Generation Time: Feb 28, 2024 at 06:28 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -83,6 +83,13 @@ CREATE TABLE `pengelola` (
   `password` varchar(255) DEFAULT NULL,
   `level` enum('Admin','Petugas') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pengelola`
+--
+
+INSERT INTO `pengelola` (`id_pengelola`, `nama`, `username`, `password`, `level`) VALUES
+(1, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Admin');
 
 -- --------------------------------------------------------
 
@@ -189,7 +196,7 @@ ALTER TABLE `guru`
 -- AUTO_INCREMENT for table `pengelola`
 --
 ALTER TABLE `pengelola`
-  MODIFY `id_pengelola` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pengelola` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `percakapan`
