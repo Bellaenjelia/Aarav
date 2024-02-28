@@ -2,7 +2,7 @@
 include 'authentication/koneksi.php';
 
 if (!isset($_SESSION['user'])) {
-  header('location:authentication/login.php');
+  header('location:../authentication/login.php');
 }
 ?>
 
