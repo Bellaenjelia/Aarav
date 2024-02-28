@@ -1,5 +1,5 @@
 <?php
-include 'authentication/koneksi.php';
+include '../authentication/koneksi.php';
 
 if (!isset($_SESSION['user'])) {
   header('location:../authentication/login.php');
