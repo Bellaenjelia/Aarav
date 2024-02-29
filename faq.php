@@ -80,7 +80,7 @@
 
                         <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                Tidak, semua layanan di platform kami dapat diakses tanpa biaya tambahan, sehingga siswa tidak perlu mengeluarkan uang sepeser pun.
+                                Tidak, semua layanan di platform kami dapat diakses tanpa biaya tambahan, sehingga Anda tidak perlu mengeluarkan uang sepeser pun.
                             </div>
                         </div>
                     </div>

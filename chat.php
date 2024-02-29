@@ -1,3 +1,6 @@
+<?php
+$id_guru = $_GET['id'];
+?>
 <section class="chat page">
     <div class="container">
         <div class="card chat-card">

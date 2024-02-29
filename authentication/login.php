@@ -39,23 +39,37 @@ if (isset($_POST['login'])) {
 }
 }
 
+
 if (isset($_POST['register'])) {
-  $username = $_POST['username'];
-  $password = md5($_POST['password']);
+    $username = $_POST['username'];
+    $password = md5($_POST['password']);
 
-  $cek_siswa = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM siswa WHERE username='$username'"));
-  $cek_guru = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM guru WHERE id_guru='$username'"));
+    function generateRandomID($panjang = 8) {
+        $angka = '0123456789';
+        $panjang_angka = strlen($angka);
+        $id_random = '';
+        
+        for ($i = 0; $i < $panjang; $i++) {
+            $id_random .= $angka[rand(0, $panjang_angka - 1)];
+        }
+        
+        return $id_random;
+    }
+    
+    $id_siswa = generateRandomID();
+    $cek_siswa = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM siswa WHERE username='$username'"));
+    $cek_guru = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM guru WHERE id_guru='$username'"));
 
-  if ($cek_siswa > 0 || $cek_guru > 0) {
-      echo '<script>alert("Username sudah digunakan");</script>';
-  } else {
-      $query = mysqli_query($koneksi, "INSERT INTO siswa (username, password) VALUES ('$username', '$password')");
-      if ($query) {
-          echo '<script>alert("Register Berhasil, Silahkan Login!");</script>';
-      } else {
-          echo '<script>alert("Register Gagal!");</script>';
-      }
-  }
+    if ($cek_siswa > 0 || $cek_guru > 0) {
+        echo '<script>alert("Username sudah digunakan");</script>';
+    } else {
+        $query = mysqli_query($koneksi, "INSERT INTO siswa (id_siswa, username, password) VALUES ('$id_siswa', '$username', '$password')");
+        if ($query) {
+            echo '<script>alert("Register Berhasil, Silahkan Login!");</script>';
+        } else {
+            echo '<script>alert("Register Gagal!");</script>';
+        }
+    }
 }
 ?>
 <!DOCTYPE html>
