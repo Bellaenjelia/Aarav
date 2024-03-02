@@ -4,6 +4,12 @@ include 'authentication/koneksi.php';
 if (!isset($_SESSION['user'])) {
   header('location:authentication/login.php');
 }
+// Chat PHP Files
+include 'chat/helpers/user.php';
+include 'chat/helpers/percakapan.php';
+include 'chat/helpers/chat.php';
+include 'chat/helpers/opened.php';
+include 'chat/helpers/last_chat.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
