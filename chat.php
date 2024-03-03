@@ -6,8 +6,6 @@ if (isset($_GET['id'])) {
     if (mysqli_num_rows($sql) > 0) {
         $row = mysqli_fetch_assoc($sql);
         opened($row['id_guru'], $koneksi, $chats);
-    }
-}
 ?>
 <section class="chat page">
     <div class="container">
@@ -88,6 +86,15 @@ if (isset($_GET['id'])) {
         </div>
     </div>
 </section>
+
+<?php
+    } else {
+        echo "Guru not found";
+    }
+} else {
+    echo "Guru ID not provided";
+}
+?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
