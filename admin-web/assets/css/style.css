@@ -490,18 +490,12 @@ canvas {
   .messenger-box li {
     list-style: none;
     padding-bottom: 20px; }
-  .messenger-box .avatar {
-    width: 64px;
-    float: left; }
-    .messenger-box .avatar img {
-      border-radius: 100%; }
-    .messenger-box .avatar .send-time {
+    .messenger-box .send-time {
       font-size: 11px;
-      text-align: center;
       padding-top: 5px; }
   .messenger-box .msg-box {
-    margin-left: 84px;
-    margin-right: 84px; }
+    margin-left: 25px;
+    margin-right: 25px; }
   .messenger-box .inner-box {
     position: relative;
     border-radius: 10px;
@@ -525,7 +519,7 @@ canvas {
   .messenger-box .msg-sent .avatar {
     float: right; }
   .messenger-box .msg-sent .msg-box {
-    margin-right: 85px; }
+    margin-right: 25px; }
   .messenger-box .msg-sent .inner-box:after {
     left: inherit;
     right: -18px;

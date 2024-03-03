@@ -1,31 +1,27 @@
 <?php
 if (isset($_GET['id'])) {
-    $id_guru = mysqli_real_escape_string($koneksi, $_GET['id']);
-    $chats = getChats($_SESSION['user']['id_siswa'], $id_guru, $koneksi);
-    $sql = mysqli_query($koneksi, "SELECT * FROM guru WHERE id_guru = {$id_guru}");
+    $id_siswa = mysqli_real_escape_string($koneksi, $_GET['id']);
+    $chats = getChats($_SESSION['user']['id_guru'], $id_siswa, $koneksi);
+    $sql = mysqli_query($koneksi, "SELECT * FROM siswa WHERE id_siswa = {$id_siswa}");
     if (mysqli_num_rows($sql) > 0) {
         $row = mysqli_fetch_assoc($sql);
-        opened($row['id_guru'], $koneksi, $chats);
+        
+        // Call the opened function
+        opened($row['id_siswa'], $koneksi, $chats);
     }
 }
 ?>
-<section class="chat page">
-    <div class="container">
-        <div class="card chat-card">
-            <div class="card-body">
-                <div class="d-flex align-items-center mb-3">
-                    <a href="index.php" class="back-icon"><i class="bi bi-arrow-left"></i></a>
-                    <img src="assets/img/apple-touch-icon.png" alt="" width="40" height="40" class="rounded-circle ms-3 me-2">
-                    <div class="nama-guru">
-                        <span><?php echo $row['nama']; ?></span>
-                    </div>
-                </div>
-                <div class="messenger-box chat-box py-5">
+<div class="col">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title box-title"><?php echo $row['id_siswa']; ?></h4>
+            <div class="card-content">
+                <div class="messenger-box">
                     <ul id="chatBox">
-                        <?php
+                    <?php
                         if (!empty($chats)) {
                             foreach($chats as $chat){
-                                if($chat['id_asal'] == $_SESSION['user']['id_siswa']) {
+                                if($chat['id_asal'] == $_SESSION['user']['id_guru']) {
                         ?>
                         <li>
                             <div class="msg-sent msg-container">
@@ -33,12 +29,10 @@ if (isset($_GET['id'])) {
                                     <div class="inner-box">
                                         <div class="name">
                                             Anda
-                                            <div class="send-time">
-                                                <?= $chat['waktu'] ?> <!-- Assuming there's a 'timestamp' field in your chat table -->
-                                            </div>
+                                            <div class="send-time"><?= $chat['waktu'] ?></div>
                                         </div>
                                         <div class="meg">
-                                            <?= $chat['chat'] ?> <!-- Accessing the 'chat' field -->
+                                            <?= $chat['chat'] ?>
                                         </div>
                                     </div>
                                 </div>
@@ -53,17 +47,15 @@ if (isset($_GET['id'])) {
                                 <div class="msg-box">
                                     <div class="inner-box">
                                         <div class="name">
-                                            <?php echo $row['nama']; ?>
-                                            <div class="send-time">
-                                                <?= $chat['waktu'] ?> <!-- Assuming there's a 'timestamp' field in your chat table -->
-                                            </div>
+                                            Siswa
+                                            <div class="send-time"><?= $chat['waktu'] ?></div>
                                         </div>
                                         <div class="meg">
-                                            <?= $chat['chat'] ?> <!-- Accessing the 'chat' field -->
+                                        <?= $chat['chat'] ?>
                                         </div>
                                     </div>
                                 </div>
-                            </div><!-- /.msg-received -->
+                            </div><!-- /.msg-sent -->
                         </li>
                         <?php
                                 }
@@ -77,17 +69,19 @@ if (isset($_GET['id'])) {
                         }
                         ?>
                     </ul>
-                </div>
-                <div class="typing-area">
-                    <textarea id="message" class="form-control"></textarea>
-                    <button id="sendBtn">
-                        <i class="bi bi-send"></i>
-                    </button>
-                </div>
+                    <div class="send-mgs">
+                        <div class="yourmsg">
+                            <input class="form-control" type="text" id="message">
+                        </div>
+                        <button class="btn msg-send-btn" id="sendBtn">
+                            <i class="pe-7s-paper-plane"></i>
+                        </button>
+                    </div>
+                </div><!-- /.messenger-box -->
             </div>
-        </div>
-    </div>
-</section>
+        </div> <!-- /.card-body -->
+    </div><!-- /.card -->
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
@@ -103,7 +97,7 @@ if (isset($_GET['id'])) {
 
             var id_tujuan = <?php echo isset($_SESSION['user']['id_siswa']) ? $row['id_guru'] : $row['id_siswa']; ?>;
 
-            $.post("chat/ajax/insert.php",
+            $.post("../chat/ajax/insert.php",
             {
                 message: message,
                 to_id: id_tujuan
@@ -118,7 +112,7 @@ if (isset($_GET['id'])) {
 
         function fetchData() {
             var id_tujuan = <?php echo isset($_SESSION['user']['id_siswa']) ? $row['id_guru'] : $row['id_siswa']; ?>;
-            $.post("chat/ajax/getMessage.php",
+            $.post("../chat/ajax/getMessage.php",
             {
                 id_2: id_tujuan
             },

@@ -4,6 +4,11 @@ include '../authentication/koneksi.php';
 if (!isset($_SESSION['user'])) {
   header('location:../authentication/login.php');
 }
+include '../chat/helpers/user.php';
+include '../chat/helpers/percakapan.php';
+include '../chat/helpers/chat.php';
+include '../chat/helpers/opened.php';
+include '../chat/helpers/last_chat.php';
 ?>
 
 <!doctype html>
@@ -81,7 +86,7 @@ if (!isset($_SESSION['user'])) {
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="../admin-web/index.php"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                        <a href="index.php"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                     </li>
                     <li class="menu-title">UI elements</li><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
@@ -113,8 +118,11 @@ if (!isset($_SESSION['user'])) {
                             <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">Advanced Form</a></li>
                         </ul>
                     </li>
-
-                   
+                    <li class="menu-title">LAYANAN</li><!-- /.menu-title -->
+                    <li class="menu-item">
+                        <a href="index.php?page=konseling"><i class="menu-icon fa fa-comment-o"></i>Konseling</a>
+                        <a href="index.php?page=aduan"><i class="menu-icon fa fa-volume-up"></i>Aduan</a>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -229,91 +237,14 @@ if (!isset($_SESSION['user'])) {
         <!-- /#header -->
         <!-- Content -->
         <div class="content">
-            <!-- Animated -->
-            <div class="animated fadeIn">
-                <!-- Widgets  -->
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="stat-widget-five">
-                                    <div class="stat-icon dib flat-color-1">
-                                        <i class="pe-7s-cash"></i>
-                                    </div>
-                                    <div class="stat-content">
-                                        <div class="text-left dib">
-                                            <div class="stat-text">$<span class="count">23569</span></div>
-                                            <div class="stat-heading">Revenue</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="stat-widget-five">
-                                    <div class="stat-icon dib flat-color-2">
-                                        <i class="pe-7s-cart"></i>
-                                    </div>
-                                    <div class="stat-content">
-                                        <div class="text-left dib">
-                                            <div class="stat-text"><span class="count">3435</span></div>
-                                            <div class="stat-heading">Sales</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="stat-widget-five">
-                                    <div class="stat-icon dib flat-color-3">
-                                        <i class="pe-7s-browser"></i>
-                                    </div>
-                                    <div class="stat-content">
-                                        <div class="text-left dib">
-                                            <div class="stat-text"><span class="count">349</span></div>
-                                            <div class="stat-heading">Templates</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="stat-widget-five">
-                                    <div class="stat-icon dib flat-color-4">
-                                        <i class="pe-7s-users"></i>
-                                    </div>
-                                    <div class="stat-content">
-                                        <div class="text-left dib">
-                                            <div class="stat-text"><span class="count">2986</span></div>
-                                            <div class="stat-heading">Clients</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <?php
-                            $page = isset($_GET['page']) ? $_GET['page'] : 'home';
-                            if(file_exists($page . '.php')){
-                                include $page . '.php';
-                            }
-				        ?>
-                    </div>
-                </div>
-
-                
-					
+        <?php
+        $page = isset($_GET['page']) ? $_GET['page'] : 'home';
+        if (file_exists($page . '.php')) {
+            include $page . '.php';
+        } else {
+            include '404.php';
+        }
+        ?>
         <div class="clearfix"></div>
         <!-- Footer -->
         <footer class="site-footer">
@@ -333,6 +264,7 @@ if (!isset($_SESSION['user'])) {
     <!-- /#right-panel -->
 
     <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
