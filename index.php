@@ -4,6 +4,12 @@ include 'authentication/koneksi.php';
 if (!isset($_SESSION['user'])) {
   header('location:authentication/login.php');
 }
+// Chat PHP Files
+include 'chat/helpers/user.php';
+include 'chat/helpers/percakapan.php';
+include 'chat/helpers/chat.php';
+include 'chat/helpers/opened.php';
+include 'chat/helpers/last_chat.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,15 +52,13 @@ if (!isset($_SESSION['user'])) {
       <div class="logo">
         <img src="assets/img//aaravlogo.png" alt="">
       </div>
-
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link active" href="index.php">Home</a></li>
+          <li><a class="nav-link" href="index.php">Home</a></li>
           <li class="dropdown"><a href=""><span>Layanan</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="index.php?page=konseling">Konseling</a></li>
-              <li><a href="index.php?page=aduan">Aduan</a></li>
-              <li><a href="index.php?page=chat">chat</a></li>
+              <li><a href="index.php?page=konseling" class="nav-link">Konseling</a></li>
+              <li><a href="index.php?page=aduan" class="nav-link">Aduan</a></li>
             </ul>
           </li>
           <li><a class="nav-link" href="index.php?page=contact">Contact</a></li>
