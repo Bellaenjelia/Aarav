@@ -113,8 +113,6 @@ if (!isset($_SESSION['user'])) {
                             <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">Advanced Form</a></li>
                         </ul>
                     </li>
-
-                   
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>

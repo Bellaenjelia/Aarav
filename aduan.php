@@ -22,7 +22,13 @@ if (isset($_POST['bsimpan'])) {
 
 <style>
     .aduan .text-center button{
-        background: none; padding:1rem; border-radius:1rem; border:1px solid #AAD9BB; margin-top:1.5rem; width:10rem; color:#637E76;
+        background: none; 
+        padding:1rem; 
+        border-radius:1rem; 
+        border:1px solid #AAD9BB; 
+        margin-top:1.5rem; 
+        width:10rem; 
+        color:#637E76;
     }
     .aduan .text-center button:hover{
         background: #C5FFF8;
@@ -34,7 +40,7 @@ if (isset($_POST['bsimpan'])) {
 
     <div class="section-title m-3">
         <h2>Aduan</h2>
-        <p>........</p>
+        <p>Berikan Pernyataan Anda dengan Jujur!</p>
     </div>
 
     <div class="row">
