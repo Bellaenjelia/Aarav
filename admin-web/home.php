@@ -99,12 +99,12 @@
                      <tr>
                         <td width="200">Nama User</td>
                         <td width="1">:</td>
-                        <td><?php echo $_SESSION['user']['username']; ?></td>
+                        <td><?php echo $_SESSION['user']['nama']; ?></td>
                     </tr>
                     <tr>
                         <td width="200">Level User</td>
                         <td width="1">:</td>
-                        <td>Peminjam</td>
+                        <td>Guru</td>
                     </tr>
                 <?php
                 }
