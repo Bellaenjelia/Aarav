@@ -132,6 +132,6 @@ if (isset($_GET['id'])) {
                 if (data != "") scrollDown();
             });
         }
-        fetchData(); 
+        setInterval(fetchData, 5000); 
     });
 </script>

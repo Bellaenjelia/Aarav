@@ -17,7 +17,7 @@ if (isset($_GET['id'])) {
             <h4 class="card-title box-title"><?php echo $row['id_siswa']; ?></h4>
             <div class="card-content">
                 <div class="messenger-box">
-                    <ul id="chatBox">
+                    <ul id="chatBox" class="chat-box">
                     <?php
                         if (!empty($chats)) {
                             foreach($chats as $chat){
@@ -121,6 +121,6 @@ if (isset($_GET['id'])) {
                 if (data != "") scrollDown();
             });
         }
-        fetchData(); 
+        setInterval(fetchData, 5000); 
     });
 </script>

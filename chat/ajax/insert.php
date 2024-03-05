@@ -31,7 +31,7 @@ if (isset($_POST['message']) && isset($_POST['to_id'])) {
             } else {
                 $stmt2->execute([$id_asal, $id_tujuan, $id_tujuan, $id_asal]);
                 // Fetch the current time
-                $time = date("h:i:s a");
+                $time = date("Y-m-d h:i:s");
                 // Store the result set from the query
                 $stmt2->store_result();
                 // Get the number of rows returned by the query
