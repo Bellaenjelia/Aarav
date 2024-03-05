@@ -97,7 +97,7 @@ include '../chat/helpers/last_chat.php';
                         <a href="index.php?page=admin"><i class="menu-icon fa-solid fa-users-gear"></i>Admin</a>
                     </li>
                     <li class="menu-item">
-                    <a href="index.php?page=siswa"><i class="menu-icon fa-solid fa-user-graduate"></i>Siswa</a>
+                    <a href="index.php?page=guru"><i class="menu-icon fa-solid fa-user-graduate"></i>Guru</a>
                     </li>
                     <?php
                    } elseif (isset($_SESSION['user']['id_guru'])) {
@@ -145,8 +145,6 @@ include '../chat/helpers/last_chat.php';
                         </a>
 
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="index.php?page=profile"><i class="fa fa- user"></i>My Profile</a>
-
                             <a class="nav-link" href="../authentication/logout.php"><i class="fa fa-power -off"></i>Logout</a>
                         </div>
                     </div>

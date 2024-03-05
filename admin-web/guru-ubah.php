@@ -2,22 +2,22 @@
 $id = $_GET['id'];
 
 if (isset($_POST['bsimpan'])) {
-    $username = $_POST['username'];
+    $nama = $_POST['nama'];
     $password = md5($_POST['password']);
 
-    $query = mysqli_query($koneksi, "UPDATE siswa SET username='$username', password='$password' WHERE id_siswa=$id");
+    $query = mysqli_query($koneksi, "UPDATE guru SET nama='$nama', password='$password' WHERE id_guru=$id");
 
     if ($_POST['password'] != "") {
-        $query = mysqli_query($koneksi, "UPDATE siswa SET password='$password' WHERE id_siswa=$id");
+        $query = mysqli_query($koneksi, "UPDATE guru SET password='$password' WHERE id_guru=$id");
     }
 
     if ($query) {
-        echo "<script>alert('Ubah data berhasil');document.location='index.php?page=siswa';</script>";
+        echo "<script>alert('Ubah data berhasil');document.location='index.php?page=guru';</script>";
     } else {
-        echo "<script>alert('Ubah data gagal');document.location='index.php?page=siswa';</script>";
+        echo "<script>alert('Ubah data gagal');document.location='index.php?page=guru';</script>";
     }
 }
-$query = mysqli_query($koneksi, "SELECT*FROM siswa WHERE id_siswa=$id");
+$query = mysqli_query($koneksi, "SELECT*FROM guru WHERE id_guru=$id");
 $data = mysqli_fetch_array($query);
 ?>
 
@@ -28,7 +28,7 @@ $data = mysqli_fetch_array($query);
 			<div class="card">
 				<div class="card-body">
                     <h4 class="card-title">Ubah Data</h4>             
-                    <a href="?page=siswa" class="btn btn-primary" style="margin-bottom:1rem;">Kembali</a>
+                    <a href="?page=guru" class="btn btn-primary" style="margin-bottom:1rem;">Kembali</a>
 
                     <form method="post">
                         <table class="table">
@@ -36,7 +36,7 @@ $data = mysqli_fetch_array($query);
                         <tr>
                             <td>Username</td>
                             <td>:</td>
-                            <td><input type="text" class="form-control" placeholder="Username" name="username" value="<?php echo $data['username']?>"></td>
+                            <td><input type="text" class="form-control" placeholder="Username" name="nama" value="<?php echo $data['nama']?>"></td>
                         </tr>
                         <tr>
                             <td>Password</td>
