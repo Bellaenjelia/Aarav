@@ -63,6 +63,7 @@ include 'chat/helpers/last_chat.php';
           </li>
           <li><a class="nav-link" href="index.php?page=contact">Contact</a></li>
           <li><a class="nav-link" href="index.php?page=faq">F.A.Q</a></li>
+          <li><a class="nav-link" href="index.php?page=profil">Profil</a></li>
           <li><a class="getstarted" href="authentication/logout.php">Log out</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

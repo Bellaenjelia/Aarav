@@ -1,9 +1,9 @@
 <?php
-if(isset($_POST['username'])) {
-    $username = $_POST['username'];
+if(isset($_POST['nama'])) {
+    $nama = $_POST['nama'];
     $password = $_POST['password'];
     
-    $query = mysqli_query($koneksi, "INSERT INTO siswa (username,password) VALUES ('$username','$password')");
+    $query = mysqli_query($koneksi, "INSERT INTO guru (nama,password) VALUES ('$nama','$password')");
         if ($query) {
             echo '<script>alert("Tambah data berhasil")</script>';
         } else {
@@ -19,16 +19,16 @@ if(isset($_POST['username'])) {
 			<div class="card">
 				<div class="card-body" >
                     <h4 class="card-title">Tambah Data</h4>             
-                    <a href="?page=siswa" class="btn btn-primary" style="margin-bottom: 1rem;">Kembali</a>
+                    <a href="?page=guru" class="btn btn-primary" style="margin-bottom: 1rem;">Kembali</a>
                     
                     
                     <form method="post">
                         <table class="table">
                            
                             <tr>
-                                <td width="200">Username</td>
+                                <td width="200">Nama</td>
                                 <td width="1">:</td>
-                                <td><input class="form-control" type="text" name="username" required></td>
+                                <td><input class="form-control" type="text" name="nama" required></td>
                             </tr>
                             <tr>
                                 <td width="200">Password</td>
