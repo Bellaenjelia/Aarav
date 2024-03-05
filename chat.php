@@ -12,8 +12,6 @@ if (isset($_GET['id'])) {
         <div class="card chat-card">
             <div class="card-body">
                 <div class="d-flex align-items-center mb-3">
-                    <a href="index.php" class="back-icon"><i class="bi bi-arrow-left"></i></a>
-                    <img src="assets/img/apple-touch-icon.png" alt="" width="40" height="40" class="rounded-circle ms-3 me-2">
                     <div class="nama-guru">
                         <span><?php echo $row['nama']; ?></span>
                     </div>

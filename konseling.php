@@ -20,7 +20,6 @@ if (isset($_SESSION['user']['id_siswa'])) {
             <div class="card-body">
                 <a href="?page=chat&id=<?= $conversation['id_guru'];?>" class="d-flex justify-content-between align-items-center">
                     <div class="d-flex align-items-center nama-guru">
-                        <img src="assets/img/icon.png" class="rounded-circle" width="40px">
                         <span class="fs-xs m-2"><?= $conversation['nama']; ?><br>
                         <small>
                         <?php
