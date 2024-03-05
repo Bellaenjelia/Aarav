@@ -1,16 +1,17 @@
 <!-- ======= Aduan Section ======= -->
 <?php
 if (isset($_POST['bsimpan'])) {
+    $id_siswa= $_SESSION ['user'] ['id_siswa'];
     $tgl_aduan = date('Y-m-d h:i:s');
     $tgl_kejadian = $_POST['tgl_kejadian'];
     $lokasi = $_POST['lokasi'];
     $isi = $_POST['isi'];
     
     $foto = $_FILES['foto'];
-    $nama_foto = $foto['name'];
+    $nama_foto =$foto['name'];
     move_uploaded_file($foto['tmp_name'], "bukti/".$foto['name']);
 
-    $query = mysqli_query($koneksi, "INSERT INTO aduan (isi, tgl_aduan, tgl_kejadian, lokasi, foto) VALUES ('$isi', '$tgl_aduan', '$tgl_kejadian', '$lokasi', '$nama_foto')");
+    $query = mysqli_query($koneksi, "INSERT INTO aduan (id_siswa, isi, tgl_aduan, tgl_kejadian, lokasi, foto) VALUES ('$id_siswa', '$isi', '$tgl_aduan', '$tgl_kejadian', '$lokasi', '$nama_foto')");
 
     if ($query) {
         echo "<script>alert('Tambah data berhasil');document.location='index.php?page=aduan';</script>";

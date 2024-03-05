@@ -19,6 +19,9 @@
                                 Tanggal Kejadian
                             </th>
                             <th>
+                               Status
+                            </th>
+                            <th>
                                 Lokasi
                             </th>
                             <th>
@@ -40,6 +43,19 @@
                             <td><?php echo $data['isi']; ?></td>
                             <td><?php echo $data['tgl_aduan']; ?></td>
                             <td><?php echo $data['tgl_kejadian']; ?></td>
+                            <td>
+                            <?php
+                                 if ($data ['status'] == 'diproses') {
+                            ?>
+                            <a href="?page=aduan-selesai&id=<?php echo $data['id_aduan'];?>" target="_blank" class="btn btn-success"><i class="fa-solid fa-check"></i></a>
+                            <a href="?page=aduan-ditolak&id=<?php echo $data['id_aduan'];?>" target="_blank" class="btn btn-danger"><i class="fa-solid fa-xmark"></i></a>
+                            <?php
+                                 }elseif ($data ['status'] != 'diproses') {
+                                    echo $data ['status'];
+                                 }
+                            ?>  
+                            
+                        </td>
                             <td><?php echo $data['lokasi']; ?></td>
                             <td><img src="../bukti/<?php echo $data['foto']; ?>" alt="" width="100"></td>
                             <td>

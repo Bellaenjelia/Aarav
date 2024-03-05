@@ -99,8 +99,9 @@ include '../chat/helpers/last_chat.php';
                     <li class="menu-item">
                     <a href="index.php?page=guru"><i class="menu-icon fa-solid fa-user-graduate"></i>Guru</a>
                     </li>
+                    
                     <?php
-                   } elseif (isset($_SESSION['user']['id_guru'])) {
+                        } elseif (isset($_SESSION['user']['id_guru'])) {
                     ?>
                     <li class="menu-title">LAYANAN</li><!-- /.menu-title -->
                     <li class="menu-item">
@@ -110,7 +111,7 @@ include '../chat/helpers/last_chat.php';
                     <a href="index.php?page=aduan"><i class="menu-icon fa fa-volume-up"></i>Aduan</a>
                     </li>
                     <?php
-                   }
+                        }
                     ?>
                 </ul>
             </div><!-- /.navbar-collapse -->
