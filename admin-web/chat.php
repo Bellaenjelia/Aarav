@@ -112,15 +112,13 @@ if (isset($_GET['id'])) {
 
         function fetchData() {
             var id_tujuan = <?php echo isset($_SESSION['user']['id_siswa']) ? $row['id_guru'] : $row['id_siswa']; ?>;
-            $.post("../chat/ajax/getMessage.php",
-            {
-                id_2: id_tujuan
-            },
-            function(data, status){
+            $.post("chat/ajax/getMessage.php", { id_2: id_tujuan }, function(data, status){
                 $("#chatBox").append(data);
                 if (data != "") scrollDown();
             });
         }
-        setInterval(fetchData, 5000); 
+
+        // Call fetchData function every 5 seconds (5000 milliseconds)
+        setInterval(fetchData, 5000);
     });
 </script>
