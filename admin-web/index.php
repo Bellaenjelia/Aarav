@@ -156,21 +156,21 @@ include '../chat/helpers/last_chat.php';
         <!-- /#header -->
         <!-- Content -->
         <div class="content">
-        <?php
-        $page = isset($_GET['page']) ? $_GET['page'] : 'home';
-        if (file_exists($page . '.php')) {
-            include $page . '.php';
-        } else {
-            include '404.php';
-        }
-        ?>
+            <?php
+            $page = isset($_GET['page']) ? $_GET['page'] : 'home';
+            if (file_exists($page . '.php')) {
+                include $page . '.php';
+            } else {
+                include '404.php';
+            }
+            ?>
         <div class="clearfix"></div>
         <!-- Footer -->
         <footer class="site-footer">
             <div class="footer-inner bg-white">
                 <div class="row">
-                    <div class="col-sm-6 text-right">
-                        Copyright by @ Aarav</a>
+                    <div class="col text-center">
+                        Copyright by &copy; Aarav</a>
                     </div>
                 </div>
             </div>

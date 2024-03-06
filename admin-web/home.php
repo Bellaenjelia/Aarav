@@ -11,7 +11,7 @@
                         </div>
                         <div class="stat-content">
                             <div class="text-left dib">
-                                <div class="stat-text"><?php echo mysqli_num_rows(mysqli_query($koneksi, "SELECT*FROM pengelola"));?></div>
+                                <div class="stat-text"><span class="count"><?php echo mysqli_num_rows(mysqli_query($koneksi, "SELECT*FROM pengelola"));?></span></div>
                                 <div class="stat-heading">Pengelola</div>
                             </div>
                         </div>
@@ -29,7 +29,7 @@
                         </div>
                         <div class="stat-content">
                             <div class="text-left dib">
-                                <div class="stat-text"><?php echo mysqli_num_rows(mysqli_query($koneksi, "SELECT*FROM siswa"));?></div>
+                                <div class="stat-text"><span class="count"><?php echo mysqli_num_rows(mysqli_query($koneksi, "SELECT*FROM siswa"));?></span></div>
                                 <div class="stat-heading">Siswa</div>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                         </div>
                         <div class="stat-content">
                             <div class="text-left dib">
-                                <div class="stat-text"><span class="count">349</span></div>
+                                <div class="stat-text"><span class="count"><?php echo mysqli_num_rows(mysqli_query($koneksi, "SELECT*FROM percakapan"));?></span></div>
                                 <div class="stat-heading">Konseling</div>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                         </div>
                         <div class="stat-content">
                             <div class="text-left dib">
-                                <div class="stat-text"><?php echo mysqli_num_rows(mysqli_query($koneksi, "SELECT*FROM aduan"));?></div>
+                                <div class="stat-text"><span class="count"><?php echo mysqli_num_rows(mysqli_query($koneksi, "SELECT*FROM aduan"));?></span></div>
                                 <div class="stat-heading">Aduan</div>
                             </div>
                         </div>
@@ -73,11 +73,10 @@
                 </div>
             </div>
         </div>
-
-       
+    </div>
     <div class="row">
         <div class="col-lg-12">
-            <div class="card" style="margin: 1rem; margin-bottom:4.5rem; width:74rem;">
+            <div class="card">
                 <div class="card-body">
                         <table class="table">
                         <?php
@@ -93,10 +92,10 @@
                         <td width="1">:</td>
                         <td><?php echo $_SESSION['user']['level']; ?></td>
                     </tr>
-                <?php
-                }else {
+                    <?php
+                    }else {
                     ?>
-                     <tr>
+                    <tr>
                         <td width="200">Nama User</td>
                         <td width="1">:</td>
                         <td><?php echo $_SESSION['user']['nama']; ?></td>
@@ -106,9 +105,9 @@
                         <td width="1">:</td>
                         <td>Guru</td>
                     </tr>
-                <?php
-                }
-                ?>
+                    <?php
+                    }
+                    ?>
                     <tr>
                         <td width="200">Tanggal Login</td>
                         <td width="1">:</td>
@@ -118,8 +117,5 @@
                 </div>
             </div>
         </div>
-     </div>
-
-   
     </div>
 </div>
