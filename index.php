@@ -61,9 +61,8 @@ include 'chat/helpers/last_chat.php';
               <li><a href="index.php?page=aduan" class="nav-link">Aduan</a></li>
             </ul>
           </li>
-          <li><a class="nav-link" href="index.php?page=contact">Contact</a></li>
           <li><a class="nav-link" href="index.php?page=faq">F.A.Q</a></li>
-          <li><a class="nav-link" href="index.php?page=profil">Profil</a></li>
+          <li><a class="nav-link" href="index.php?page=profil">Profile</a></li>
           <li><a class="getstarted" href="authentication/logout.php">Log out</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

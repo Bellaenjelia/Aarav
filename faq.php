@@ -86,11 +86,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="section-title mt-3" data-aos="zoom-in">
-                <h5>Tidak menemukan apa yang Anda cari?</h5>
-                <small>Jika Anda memiliki pertanyaan. Hubungi kami melalui <a href="?page=contact">contact</a></small>
-            </div>
         </div>
     </div>
 </section>

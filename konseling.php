@@ -8,7 +8,11 @@ if (isset($_SESSION['user']['id_siswa'])) {
   }
 ?>
 <section class="chat page d-flex justify-content-center align-items-center">
-    <div class="container w-400">
+    <div class="container w-600">
+        <div class="section-title" data-aos="zoom-in">
+            <h2>Konseling</h2>
+            <p>Ayo temukan solusi dan dukungan yang Anda butuhkan!</p>
+        </div>
         <?php
         if (!empty($conversations)) {
             foreach ($conversations as $conversation) {
