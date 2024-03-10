@@ -50,7 +50,7 @@ include 'chat/helpers/last_chat.php';
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <img src="assets/img//aaravlogo.png" alt="">
+        <a href=""><img src="assets/img//aaravlogo.png" alt="logo Aarav"></a>
       </div>
       <nav id="navbar" class="navbar">
         <ul>
@@ -89,12 +89,13 @@ include 'chat/helpers/last_chat.php';
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Aarav</h3>
-            <p>
-              Metro Pusat <br>
+            <a href="index.php"><img src="assets/img//aaravlogo.png" alt="logo Aarav" height="30"></a>
+            <p class="mt-2">
+              Jl. Kemiri 15A Iring Mulyo <br>
+              Metro Timur, Metro <br>
               Lampung <br><br>
               <strong>Phone:</strong> +62 9891 0230 09<br>
-              <strong>Email:</strong> aarav@gmailcom<br>
+              <strong>Email:</strong> aarav@gmail.com<br>
             </p>
           </div>
 
@@ -117,7 +118,6 @@ include 'chat/helpers/last_chat.php';
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Social Networks</h4>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>

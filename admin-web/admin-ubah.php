@@ -47,16 +47,19 @@ $data = mysqli_fetch_array($query);
                         <tr>
                             <td>Password</td>
                             <td>:</td>
-                            <td><input type="password" class="form-control" placeholder="Password" name="password"></td>
+                            <td>
+                                <input type="password" class="form-control" placeholder="Password" name="password">
+                                <div class="form-text"><small>*) Jika tidak ingin diubah, kosongkan saja</small></div>
+                            </td>
                         </tr>
                         <tr>
                             <td>Level</td>
                             <td>:</td>
                             <td>
-                                <select class="form-select" aria-label="Default select example" name="level">
+                                <select class="form-control" aria-label="Default select example" name="level">
                                     <option selected></option>
-                                    <option value="admin" <?php if($data['level'] == 'admin') echo 'selected'; ?>>Admin</option>
-                                    <option value="petugas" <?php if($data['level'] == 'petugas') echo 'selected'; ?>>Petugas</option>
+                                    <option value="admin" <?php if($data['level'] == 'Admin') echo 'selected'; ?>>Admin</option>
+                                    <option value="petugas" <?php if($data['level'] == 'Petugas') echo 'selected'; ?>>Petugas</option>
                                 </select>
                             </td>
                         </tr>

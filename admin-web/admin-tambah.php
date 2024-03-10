@@ -45,7 +45,7 @@ if(isset($_POST['nama'])) {
                                 <td width="200">Level</td>
                                 <td width="1">:</td>
                                 <td>
-                                    <select name="level" class="form-select">
+                                    <select name="level" class="form-control">
                                         <option value="admin">admin</option>
                                         <option value="petugas">petugas</option>
                                     </select>

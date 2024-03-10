@@ -1,9 +1,10 @@
 <?php
 if(isset($_POST['nama'])) {
+    $id_guru = $_POST['id_guru'];
     $nama = $_POST['nama'];
     $password = $_POST['password'];
     
-    $query = mysqli_query($koneksi, "INSERT INTO guru (nama,password) VALUES ('$nama','$password')");
+    $query = mysqli_query($koneksi, "INSERT INTO guru (id_guru,nama,password) VALUES ('$id_guru','$nama','$password')");
         if ($query) {
             echo '<script>alert("Tambah data berhasil")</script>';
         } else {
@@ -25,6 +26,11 @@ if(isset($_POST['nama'])) {
                     <form method="post">
                         <table class="table">
                            
+                            <tr>
+                                <td width="200">Kode Guru</td>
+                                <td width="1">:</td>
+                                <td><input class="form-control" type="number" name="id_guru" required></td>
+                            </tr>
                             <tr>
                                 <td width="200">Nama</td>
                                 <td width="1">:</td>

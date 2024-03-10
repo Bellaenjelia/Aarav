@@ -12,7 +12,6 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #585a61;
-  
 }
 
 a {
@@ -160,7 +159,7 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
+.navbar li:hover > a {
   color: #5777ba;
 }
 
@@ -214,11 +213,11 @@ h6 {
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
+.navbar .dropdown ul li:hover > a {
   color: #5777ba;
 }
 
-.navbar .dropdown:hover>ul {
+.navbar .dropdown:hover > ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
@@ -230,7 +229,7 @@ h6 {
   visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover>ul {
+.navbar .dropdown .dropdown:hover > ul {
   opacity: 1;
   top: 0;
   left: 100%;
@@ -242,7 +241,7 @@ h6 {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
@@ -314,7 +313,7 @@ h6 {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover>a {
+.navbar-mobile li:hover > a {
   color: #5777ba;
 }
 
@@ -349,11 +348,11 @@ h6 {
 
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover>a {
+.navbar-mobile .dropdown ul li:hover > a {
   color: #5777ba;
 }
 
-.navbar-mobile .dropdown>.dropdown-active {
+.navbar-mobile .dropdown > .dropdown-active {
   display: block;
 }
 
@@ -418,7 +417,7 @@ h6 {
   top: 8.5px;
 }
 
-#hero .download-btn+.download-btn {
+#hero .download-btn + .download-btn {
   margin-left: 20px;
 }
 
@@ -427,7 +426,7 @@ h6 {
     text-align: center;
   }
 
-  #hero .download-btn+.download-btn {
+  #hero .download-btn + .download-btn {
     margin: 0 10px;
   }
 
@@ -526,11 +525,11 @@ section {
   font-size: 14px;
 }
 
-.breadcrumbs ol li+li {
+.breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li+li::before {
+.breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: #6c757d;
@@ -599,7 +598,7 @@ section {
 /*--------------------------------------------------------------
 # Details
 --------------------------------------------------------------*/
-.details .content+.content {
+.details .content + .content {
   margin-top: 100px;
 }
 
@@ -885,7 +884,7 @@ section {
   list-style: none;
 }
 
-.faq .accordion-list li+li {
+.faq .accordion-list li + li {
   margin-top: 15px;
 }
 
@@ -998,7 +997,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1056,7 +1055,7 @@ section {
   padding: 12px 15px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   background: #fff;
   border: 2px solid #5777ba;
   padding: 10px 24px;
@@ -1066,7 +1065,7 @@ section {
   margin-top: 5px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: #5777ba;
   color: #fff;
 }
@@ -1130,13 +1129,13 @@ section {
   text-align: left;
 }
 
-#footer .footer-newsletter form input[type=email] {
+#footer .footer-newsletter form input[type="email"] {
   border: 0;
   padding: 4px 8px;
   width: calc(100% - 100px);
 }
 
-#footer .footer-newsletter form input[type=submit] {
+#footer .footer-newsletter form input[type="submit"] {
   position: absolute;
   top: 0;
   right: 0;
@@ -1152,7 +1151,7 @@ section {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-#footer .footer-newsletter form input[type=submit]:hover {
+#footer .footer-newsletter form input[type="submit"]:hover {
   background: #415f9d;
 }
 
@@ -1264,39 +1263,39 @@ section {
 }
 
 :root {
-  --white-color:                  #ffffff;
-  --primary-color:                #13547a;
-  --secondary-color:              #80d0c7;
-  --section-bg-color:             #f0f8ff;
-  --custom-btn-bg-color:          #80d0c7;
-  --custom-btn-bg-hover-color:    #13547a;
-  --dark-color:                   #000000;
-  --p-color:                      #717275;
-  --border-color:                 #7fffd4;
-  --link-hover-color:             #13547a;
+  --white-color: #ffffff;
+  --primary-color: #13547a;
+  --secondary-color: #80d0c7;
+  --section-bg-color: #f0f8ff;
+  --custom-btn-bg-color: #80d0c7;
+  --custom-btn-bg-hover-color: #13547a;
+  --dark-color: #000000;
+  --p-color: #717275;
+  --border-color: #7fffd4;
+  --link-hover-color: #13547a;
 
-  --body-font-family:             'Open Sans', sans-serif;
-  --title-font-family:            'Montserrat', sans-serif;
+  --body-font-family: "Open Sans", sans-serif;
+  --title-font-family: "Montserrat", sans-serif;
 
-  --h1-font-size:                 58px;
-  --h2-font-size:                 46px;
-  --h3-font-size:                 32px;
-  --h4-font-size:                 28px;
-  --h5-font-size:                 24px;
-  --h6-font-size:                 22px;
-  --p-font-size:                  20px;
-  --menu-font-size:               14px;
-  --btn-font-size:                18px;
-  --copyright-font-size:          16px;
+  --h1-font-size: 58px;
+  --h2-font-size: 46px;
+  --h3-font-size: 32px;
+  --h4-font-size: 28px;
+  --h5-font-size: 24px;
+  --h6-font-size: 22px;
+  --p-font-size: 20px;
+  --menu-font-size: 14px;
+  --btn-font-size: 18px;
+  --copyright-font-size: 16px;
 
-  --border-radius-large:          100px;
-  --border-radius-medium:         20px;
-  --border-radius-small:          10px;
+  --border-radius-large: 100px;
+  --border-radius-medium: 20px;
+  --border-radius-small: 10px;
 
-  --font-weight-normal:           400;
-  --font-weight-medium:           500;
-  --font-weight-semibold:         600;
-  --font-weight-bold:             700;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 }
 
 /*---------------------------------------
@@ -1328,7 +1327,6 @@ section {
 }
 
 @media (max-width: 768px) {
-
   #footer .copyright,
   #footer .credits {
     float: none;

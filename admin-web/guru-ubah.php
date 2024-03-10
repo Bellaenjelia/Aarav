@@ -2,10 +2,11 @@
 $id = $_GET['id'];
 
 if (isset($_POST['bsimpan'])) {
+    $id_guru = $_POST['id_guru'];
     $nama = $_POST['nama'];
     $password = md5($_POST['password']);
 
-    $query = mysqli_query($koneksi, "UPDATE guru SET nama='$nama', password='$password' WHERE id_guru=$id");
+    $query = mysqli_query($koneksi, "UPDATE guru SET id_guru='$id_guru', nama='$nama', password='$password' WHERE id_guru=$id");
 
     if ($_POST['password'] != "") {
         $query = mysqli_query($koneksi, "UPDATE guru SET password='$password' WHERE id_guru=$id");
@@ -34,6 +35,11 @@ $data = mysqli_fetch_array($query);
                         <table class="table">
                      
                         <tr>
+                            <td>Kode Guru</td>
+                            <td>:</td>
+                            <td><input type="number" class="form-control" placeholder="Kode Guru" name="id_guru" value="<?php echo $data['id_guru']?>"></td>
+                        </tr>
+                        <tr>
                             <td>Username</td>
                             <td>:</td>
                             <td><input type="text" class="form-control" placeholder="Username" name="nama" value="<?php echo $data['nama']?>"></td>
@@ -41,7 +47,10 @@ $data = mysqli_fetch_array($query);
                         <tr>
                             <td>Password</td>
                             <td>:</td>
-                            <td><input type="password" class="form-control" placeholder="Password" name="password"></td>
+                            <td>
+                                <input type="password" class="form-control" placeholder="Password" name="password">
+                                <div class="form-text"><small>*) Jika tidak ingin diubah, kosongkan saja</small></div>
+                            </td>
                         </tr>
                         
                         <tr>

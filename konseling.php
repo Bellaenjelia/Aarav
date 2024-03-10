@@ -16,8 +16,8 @@ if (isset($_SESSION['user']['id_siswa'])) {
         <?php
         if (!empty($conversations)) {
             foreach ($conversations as $conversation) {
-                $id_1 = $_SESSION['user']['id_siswa']; // Assuming this is the user's ID
-                $id_2 = $conversation['id_guru'];; // Assuming this is the recipient's ID
+                $id_1 = $_SESSION['user']['id_siswa'];
+                $id_2 = $conversation['id_guru'];
                 $lastChat = getLastChat($id_1, $id_2, $koneksi);
         ?>
         <div class="card konseling-card mb-3" data-aos="zoom-in">

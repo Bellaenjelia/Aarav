@@ -13,6 +13,9 @@
                                 No
                             </th>
                             <th>
+                                Kode Guru
+                            </th>
+                            <th>
                                 Nama
                             </th>
                             <th>
@@ -28,6 +31,7 @@
                             ?>
                             <tr>
                                 <th scope="row"><?php echo $i++; ?></th>
+                                <td><?php echo $data['id_guru']; ?></td>
                                 <td><?php echo $data['nama']; ?></td>
                                 <td>
                                     <a class="btn btn-info" style="border-radius:0.5rem;" href="?page=guru-ubah&id=<?php echo $data['id_guru']; ?>"><i class="fa-solid fa-pen-to-square"></i> </a>
