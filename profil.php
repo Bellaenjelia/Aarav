@@ -7,7 +7,7 @@ $data = mysqli_fetch_array($query);
 <section class="profile page-content content-wrapper stretch-card" style="margin-top: 2rem;">
     <div class="container py-5 card">
         <div class="background-profile">
-            <img src="" class="rounded" alt="..." width="100%" height="280px" style="margin-bottom: 2rem;">
+            <img src="assets/images/user/bg.jpg" class="rounded" alt="..." width="100%" height="457rem" style="margin-bottom: 1rem; margin-top:-1.7rem; text-align:center;">
         </div>
         <div class="row justify-content-center profile-content">
             <div class="col-10">

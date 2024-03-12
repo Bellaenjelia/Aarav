@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 04, 2024 at 07:13 AM
+-- Generation Time: Mar 12, 2024 at 01:22 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -29,9 +29,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `aduan` (
   `id_aduan` int(11) NOT NULL,
+  `id_siswa` int(11) DEFAULT NULL,
   `isi` text DEFAULT NULL,
-  `tgl_aduan` datetime DEFAULT NULL,
+  `tgl_aduan` date DEFAULT NULL,
   `tgl_kejadian` date DEFAULT NULL,
+  `status` enum('diproses','selesai','ditolak') DEFAULT 'diproses',
   `lokasi` varchar(255) DEFAULT NULL,
   `foto` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -40,8 +42,8 @@ CREATE TABLE `aduan` (
 -- Dumping data for table `aduan`
 --
 
-INSERT INTO `aduan` (`id_aduan`, `isi`, `tgl_aduan`, `tgl_kejadian`, `lokasi`, `foto`) VALUES
-(2, 'syafna pacaran sama jay', '2024-03-04 05:37:22', '2024-03-03', 'Metro', 'beach1.jpg');
+INSERT INTO `aduan` (`id_aduan`, `id_siswa`, `isi`, `tgl_aduan`, `tgl_kejadian`, `status`, `lokasi`, `foto`) VALUES
+(15, 2, 'syafna ketauan dating sama haechan', '2024-03-12', '2024-03-12', 'selesai', 'Metro', 'beach2.jpg');
 
 -- --------------------------------------------------------
 
@@ -64,9 +66,10 @@ CREATE TABLE `chat` (
 --
 
 INSERT INTO `chat` (`id_chat`, `id_percakapan`, `id_asal`, `id_tujuan`, `chat`, `waktu`, `opened`) VALUES
-(1, NULL, 2, 1, 'halo', NULL, 0),
+(1, NULL, 2, 1, 'halo', NULL, 1),
 (2, NULL, 75996416, 1, 'halo', '2024-03-02 13:29:09', 0),
-(3, NULL, 2, 1, 'hi', '2024-03-04 13:10:35', 0);
+(3, NULL, 2, 1, 'hi', '2024-03-04 13:10:35', 1),
+(4, NULL, 1, 2, 'kenapa nak', '2024-03-05 15:07:51', 0);
 
 -- --------------------------------------------------------
 
@@ -138,6 +141,7 @@ INSERT INTO `percakapan` (`id_percakapan`, `id_guru`, `id_siswa`, `jdl_percakapa
 CREATE TABLE `siswa` (
   `id_siswa` int(11) NOT NULL,
   `username` varchar(255) DEFAULT NULL,
+  `bio` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -145,9 +149,9 @@ CREATE TABLE `siswa` (
 -- Dumping data for table `siswa`
 --
 
-INSERT INTO `siswa` (`id_siswa`, `username`, `password`) VALUES
-(2, 'siswa', 'bcd724d15cde8c47650fda962968f102'),
-(75996418, 'anonim', 'anonim');
+INSERT INTO `siswa` (`id_siswa`, `username`, `bio`, `password`) VALUES
+(2, 'siswa', NULL, 'bcd724d15cde8c47650fda962968f102'),
+(75996418, 'anonim', NULL, 'anonim');
 
 --
 -- Indexes for dumped tables
@@ -157,7 +161,8 @@ INSERT INTO `siswa` (`id_siswa`, `username`, `password`) VALUES
 -- Indexes for table `aduan`
 --
 ALTER TABLE `aduan`
-  ADD PRIMARY KEY (`id_aduan`);
+  ADD PRIMARY KEY (`id_aduan`),
+  ADD KEY `id_siswa` (`id_siswa`);
 
 --
 -- Indexes for table `chat`
@@ -199,13 +204,13 @@ ALTER TABLE `siswa`
 -- AUTO_INCREMENT for table `aduan`
 --
 ALTER TABLE `aduan`
-  MODIFY `id_aduan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_aduan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `chat`
 --
 ALTER TABLE `chat`
-  MODIFY `id_chat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_chat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `guru`
@@ -234,6 +239,12 @@ ALTER TABLE `siswa`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `aduan`
+--
+ALTER TABLE `aduan`
+  ADD CONSTRAINT `aduan_ibfk_1` FOREIGN KEY (`id_siswa`) REFERENCES `siswa` (`id_siswa`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `percakapan`
