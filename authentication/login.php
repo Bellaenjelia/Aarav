@@ -1,14 +1,3 @@
-<!--
-  login guru
-  username : 1
-  password : 1
-
-  =====
-
-  login siswa
-  username : siswa
-  password : siswa
--->
 <?php
 include 'koneksi.php';
 
