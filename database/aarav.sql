@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 12, 2024 at 01:22 PM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Generation Time: Mar 13, 2024 at 10:58 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,14 +36,15 @@ CREATE TABLE `aduan` (
   `status` enum('diproses','selesai','ditolak') DEFAULT 'diproses',
   `lokasi` varchar(255) DEFAULT NULL,
   `foto` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `aduan`
 --
 
 INSERT INTO `aduan` (`id_aduan`, `id_siswa`, `isi`, `tgl_aduan`, `tgl_kejadian`, `status`, `lokasi`, `foto`) VALUES
-(15, 2, 'syafna ketauan dating sama haechan', '2024-03-12', '2024-03-12', 'selesai', 'Metro', 'beach2.jpg');
+(15, 75996418, 'syafna ketauan dating sama haechan', '2024-03-12', '2024-03-12', 'selesai', 'Metro', 'beach2.jpg'),
+(20, 23514096, 'tes', '2024-03-13', '2024-03-01', 'ditolak', 'SMK 3 Metro', '20240313052054_Screenshot 2023-08-14 202240.png');
 
 -- --------------------------------------------------------
 
@@ -53,23 +54,20 @@ INSERT INTO `aduan` (`id_aduan`, `id_siswa`, `isi`, `tgl_aduan`, `tgl_kejadian`,
 
 CREATE TABLE `chat` (
   `id_chat` int(11) NOT NULL,
-  `id_percakapan` int(11) DEFAULT NULL,
   `id_asal` int(11) DEFAULT NULL,
   `id_tujuan` int(11) DEFAULT NULL,
   `chat` varchar(255) DEFAULT NULL,
   `waktu` datetime DEFAULT current_timestamp(),
   `opened` tinyint(1) DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `chat`
 --
 
-INSERT INTO `chat` (`id_chat`, `id_percakapan`, `id_asal`, `id_tujuan`, `chat`, `waktu`, `opened`) VALUES
-(1, NULL, 2, 1, 'halo', NULL, 1),
-(2, NULL, 75996416, 1, 'halo', '2024-03-02 13:29:09', 0),
-(3, NULL, 2, 1, 'hi', '2024-03-04 13:10:35', 1),
-(4, NULL, 1, 2, 'kenapa nak', '2024-03-05 15:07:51', 0);
+INSERT INTO `chat` (`id_chat`, `id_asal`, `id_tujuan`, `chat`, `waktu`, `opened`) VALUES
+(2, 75996418, 1, 'halo', '2024-03-02 13:29:09', 0),
+(3, 1, 75996418, 'hi', '2024-03-04 13:10:35', 1);
 
 -- --------------------------------------------------------
 
@@ -81,7 +79,7 @@ CREATE TABLE `guru` (
   `id_guru` int(11) NOT NULL,
   `nama` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `guru`
@@ -100,16 +98,15 @@ CREATE TABLE `pengelola` (
   `id_pengelola` int(11) NOT NULL,
   `nama` varchar(255) DEFAULT NULL,
   `username` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL,
-  `level` enum('Admin','Petugas') DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `password` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pengelola`
 --
 
-INSERT INTO `pengelola` (`id_pengelola`, `nama`, `username`, `password`, `level`) VALUES
-(1, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Admin');
+INSERT INTO `pengelola` (`id_pengelola`, `nama`, `username`, `password`) VALUES
+(1, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3');
 
 -- --------------------------------------------------------
 
@@ -120,17 +117,15 @@ INSERT INTO `pengelola` (`id_pengelola`, `nama`, `username`, `password`, `level`
 CREATE TABLE `percakapan` (
   `id_percakapan` int(11) NOT NULL,
   `id_guru` int(11) DEFAULT NULL,
-  `id_siswa` int(11) DEFAULT NULL,
-  `jdl_percakapan` varchar(255) DEFAULT NULL,
-  `chat_akhir` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `id_siswa` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `percakapan`
 --
 
-INSERT INTO `percakapan` (`id_percakapan`, `id_guru`, `id_siswa`, `jdl_percakapan`, `chat_akhir`) VALUES
-(4, 1, 2, NULL, NULL);
+INSERT INTO `percakapan` (`id_percakapan`, `id_guru`, `id_siswa`) VALUES
+(5, 1, 75996418);
 
 -- --------------------------------------------------------
 
@@ -143,15 +138,15 @@ CREATE TABLE `siswa` (
   `username` varchar(255) DEFAULT NULL,
   `bio` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `siswa`
 --
 
 INSERT INTO `siswa` (`id_siswa`, `username`, `bio`, `password`) VALUES
-(2, 'siswa', NULL, 'bcd724d15cde8c47650fda962968f102'),
-(75996418, 'anonim', NULL, 'anonim');
+(23514096, 'siswa', NULL, 'bcd724d15cde8c47650fda962968f102'),
+(75996418, 'anonim', NULL, '326cd616780c2a2283ff91294f39fce4');
 
 --
 -- Indexes for dumped tables
@@ -204,7 +199,7 @@ ALTER TABLE `siswa`
 -- AUTO_INCREMENT for table `aduan`
 --
 ALTER TABLE `aduan`
-  MODIFY `id_aduan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_aduan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `chat`
@@ -228,7 +223,7 @@ ALTER TABLE `pengelola`
 -- AUTO_INCREMENT for table `percakapan`
 --
 ALTER TABLE `percakapan`
-  MODIFY `id_percakapan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_percakapan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `siswa`
