@@ -124,11 +124,6 @@
             <div class="swiper-slide"><a href="assets/img/gallery/gallery-5.png" class="gallery-lightbox" data-gall="gallery-carousel"><img src="assets/img/gallery/gallery-5.png" class="img-fluid" alt=""></a></div>
             <div class="swiper-slide"><a href="assets/img/gallery/gallery-6.png" class="gallery-lightbox" data-gall="gallery-carousel"><img src="assets/img/gallery/gallery-6.png" class="img-fluid" alt=""></a></div>
             <div class="swiper-slide"><a href="assets/img/gallery/gallery-7.png" class="gallery-lightbox" data-gall="gallery-carousel"><img src="assets/img/gallery/gallery-7.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href="assets/img/gallery/gallery-8.png" class="gallery-lightbox" data-gall="gallery-carousel"><img src="assets/img/gallery/gallery-8.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href="assets/img/gallery/gallery-9.png" class="gallery-lightbox" data-gall="gallery-carousel"><img src="assets/img/gallery/gallery-9.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href="assets/img/gallery/gallery-10.png" class="gallery-lightbox" data-gall="gallery-carousel"><img src="assets/img/gallery/gallery-10.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href="assets/img/gallery/gallery-11.png" class="gallery-lightbox" data-gall="gallery-carousel"><img src="assets/img/gallery/gallery-11.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href="assets/img/gallery/gallery-12.png" class="gallery-lightbox" data-gall="gallery-carousel"><img src="assets/img/gallery/gallery-12.png" class="img-fluid" alt=""></a></div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
