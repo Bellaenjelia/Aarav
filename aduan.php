@@ -8,8 +8,8 @@ if (isset($_POST['bsimpan'])) {
     $isi = $_POST['isi'];
     
     $foto = $_FILES['foto'];
-    $nama_foto =$foto['name'];
-    move_uploaded_file($foto['tmp_name'], "bukti/".$foto['name']);
+    $nama_foto = date('YmdHis')."_".$foto['name'];
+    move_uploaded_file($foto['tmp_name'], "bukti/".$nama_foto);
 
     $query = mysqli_query($koneksi, "INSERT INTO aduan (id_siswa, isi, tgl_aduan, tgl_kejadian, lokasi, foto) VALUES ('$id_siswa', '$isi', '$tgl_aduan', '$tgl_kejadian', '$lokasi', '$nama_foto')");
 
@@ -50,8 +50,12 @@ if (isset($_POST['bsimpan'])) {
         <form method="post" role="form" data-aos="fade-up" enctype="multipart/form-data">
             <div class="form-group">
                 <label class="col-sm-7 col-form-label" style="color: black;">Tanggal Kejadian :</label>
-                <input placeholder="tgl_kejadian" type="date" class="form-control" name="tgl_kejadian" id="email" required>
+                <input placeholder="tgl_kejadian" type="date" class="form-control" name="tgl_kejadian" id="tgl_kejadian" required>
             </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            <script>
+                $('#tgl_kejadian').attr('max', new Date().toISOString().split('T')[0]);
+            </script>
             <div class="form-group mt-3">
                 <label class="col-sm-7 col-form-label" style="color: black;">Lokasi :</label>
                 <input placeholder="Lokasi" type="text" class="form-control" name="lokasi" id="lokasi" required>

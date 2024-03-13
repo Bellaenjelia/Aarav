@@ -57,10 +57,21 @@
                             
                         </td>
                             <td><?php echo $data['lokasi']; ?></td>
-                            <td><img src="../bukti/<?php echo $data['foto']; ?>" alt="" width="100"></td>
+                            <td>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#modalBukti<?php echo $data['id_aduan'];?>">
+                                    <img src="../bukti/<?php echo $data['foto']; ?>" alt="" width="100">
+                                </button>
+                            </td>
+                            <?php
+                                 if ($data ['status'] != 'diproses') {
+                            ?>  
                             <td>
                                 <a onclick="return confirm('Yakin Hapus?')" class="btn btn-danger" href="?page=aduan-hapus&id=<?php echo $data['id_aduan']; ?>"><i class="fa-solid fa-trash"></i></a>
                             </td>
+                            <?php
+                                 }
+                            ?>  
                         </tr>
                         <?php
                     }
@@ -72,3 +83,30 @@
                     </div>
                 </div>
     </div>
+
+<?php
+$query = mysqli_query($koneksi, "SELECT * FROM aduan");
+while ($data = mysqli_fetch_array($query)) {
+?>
+<!-- Modal -->
+<div class="modal fade" id="modalBukti<?php echo $data['id_aduan'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Bukti</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="../bukti/<?php echo $data['foto']; ?>" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<?php
+}
+?>

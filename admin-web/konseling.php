@@ -33,6 +33,14 @@ if (isset($_SESSION['user']['id_siswa'])) {
                             ?>
                         </small>            	
                     </div>
+                    <?php
+                    $id_guru = $_SESSION['user']['id_guru'];
+                    $query_open = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM chat WHERE id_tujuan = $id_guru AND opened = 0"));
+                    ?>
+
+                    <span class="badge badge-pill badge-primary p-2 <?php if ($query_open == 0) echo 'sr-only'; ?>">
+                        <?php echo $query_open; ?>
+                    </span>
                 </a>
             </div>
         </div>

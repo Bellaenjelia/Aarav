@@ -5,7 +5,8 @@ if (isset($_GET['id'])) {
     $sql = mysqli_query($koneksi, "SELECT * FROM guru WHERE id_guru = {$id_guru}");
     if (mysqli_num_rows($sql) > 0) {
         $row = mysqli_fetch_assoc($sql);
-        opened($row['id_guru'], $koneksi, $chats);
+        opened($row['id_guru'], $_SESSION['user']['id_siswa'], $koneksi);
+    }
 ?>
 <section class="chat page">
     <div class="container">
@@ -86,14 +87,8 @@ if (isset($_GET['id'])) {
 </section>
 
 <?php
-    } else {
-        echo "Guru not found";
     }
-} else {
-    echo "Guru ID not provided";
-}
 ?>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
     function scrollDown() {
@@ -119,17 +114,13 @@ if (isset($_GET['id'])) {
                 scrollDown();
             });
         });
-
-
         function fetchData() {
-            var id_tujuan = <?php echo isset($_SESSION['user']['id_siswa']) ? $row['id_guru'] : $row['id_siswa']; ?>;
+        var id_tujuan = <?php echo isset($_SESSION['user']['id_siswa']) ? $row['id_guru'] : $row['id_siswa']; ?>;
             $.post("chat/ajax/getMessage.php", { id_2: id_tujuan }, function(data, status){
                 $("#chatBox").append(data);
-                if (data != "") scrollDown();
+                if (data != "") scrollDown(); // Ensure scrolling to the bottom if new data is fetched
             });
         }
-
-        // Call fetchData function every 5 seconds (5000 milliseconds)
-        setInterval(fetchData, 5000);
+        setInterval(fetchData, 1000); // Refresh every 1 second
     });
 </script>

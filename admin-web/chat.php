@@ -1,13 +1,12 @@
 <?php
+// Assuming session_start() has been called before this code block
 if (isset($_GET['id'])) {
     $id_siswa = mysqli_real_escape_string($koneksi, $_GET['id']);
     $chats = getChats($_SESSION['user']['id_guru'], $id_siswa, $koneksi);
     $sql = mysqli_query($koneksi, "SELECT * FROM siswa WHERE id_siswa = {$id_siswa}");
     if (mysqli_num_rows($sql) > 0) {
         $row = mysqli_fetch_assoc($sql);
-        
-        // Call the opened function
-        opened($row['id_siswa'], $koneksi, $chats);
+        opened($row['id_siswa'], $_SESSION['user']['id_guru'], $koneksi);
     }
 }
 ?>
@@ -102,7 +101,7 @@ if (isset($_GET['id'])) {
                 message: message,
                 to_id: id_tujuan
             },
-            function(data, status){
+            function(data){
                 $("#message").val("");
                 $("#chatBox").append(data);
                 scrollDown();
@@ -111,14 +110,12 @@ if (isset($_GET['id'])) {
 
 
         function fetchData() {
-            var id_tujuan = <?php echo isset($_SESSION['user']['id_siswa']) ? $row['id_guru'] : $row['id_siswa']; ?>;
-            $.post("chat/ajax/getMessage.php", { id_2: id_tujuan }, function(data, status){
+        var id_tujuan = <?php echo isset($_SESSION['user']['id_siswa']) ? $row['id_guru'] : $row['id_siswa']; ?>;
+            $.post("../chat/ajax/getMessage.php", { id_2: id_tujuan }, function(data){
                 $("#chatBox").append(data);
-                if (data != "") scrollDown();
+                if (data != "") scrollDown(); // Ensure scrolling to the bottom if new data is fetched
             });
         }
-
-        // Call fetchData function every 5 seconds (5000 milliseconds)
-        setInterval(fetchData, 5000);
+        setInterval(fetchData, 1000);
     });
 </script>

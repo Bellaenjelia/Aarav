@@ -149,7 +149,6 @@ include 'chat/helpers/last_chat.php';
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
 
 </html>

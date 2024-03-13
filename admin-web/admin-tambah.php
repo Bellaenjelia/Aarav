@@ -3,9 +3,8 @@ if(isset($_POST['nama'])) {
     $nama = $_POST['nama'];
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $level = $_POST['level'];
     
-    $query = mysqli_query($koneksi, "INSERT INTO pengelola (nama,username,password,level) VALUES ('$nama','$username','$password','$level')");
+    $query = mysqli_query($koneksi, "INSERT INTO pengelola (nama,username,password) VALUES ('$nama','$username','$password')");
         if ($query) {
             echo '<script>alert("Tambah data berhasil")</script>';
         } else {
@@ -40,16 +39,6 @@ if(isset($_POST['nama'])) {
                                 <td width="200">Password</td>
                                 <td width="1">:</td>
                                 <td><input class="form-control" type="password" name="password" required></td>
-                            </tr>
-                            <tr>
-                                <td width="200">Level</td>
-                                <td width="1">:</td>
-                                <td>
-                                    <select name="level" class="form-control">
-                                        <option value="admin">admin</option>
-                                        <option value="petugas">petugas</option>
-                                    </select>
-                                </td>
                             </tr>
                             <tr>
                                 <td></td>

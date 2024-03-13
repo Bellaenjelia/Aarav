@@ -5,9 +5,8 @@ if (isset($_POST['bsimpan'])) {
     $nama = $_POST['nama'];
     $username = $_POST['username'];
     $password = md5($_POST['password']);
-    $level = $_POST['level'];
 
-    $query = mysqli_query($koneksi, "UPDATE pengelola SET nama='$nama', username='$username', password='$password', level='$level' WHERE id_pengelola=$id");
+    $query = mysqli_query($koneksi, "UPDATE pengelola SET nama='$nama', username='$username', password='$password' WHERE id_pengelola=$id");
 
     if ($_POST['password'] != "") {
         $query = mysqli_query($koneksi, "UPDATE pengelola SET password='$password' WHERE id_pengelola=$id");
@@ -50,17 +49,6 @@ $data = mysqli_fetch_array($query);
                             <td>
                                 <input type="password" class="form-control" placeholder="Password" name="password">
                                 <div class="form-text"><small>*) Jika tidak ingin diubah, kosongkan saja</small></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Level</td>
-                            <td>:</td>
-                            <td>
-                                <select class="form-control" aria-label="Default select example" name="level">
-                                    <option selected></option>
-                                    <option value="admin" <?php if($data['level'] == 'Admin') echo 'selected'; ?>>Admin</option>
-                                    <option value="petugas" <?php if($data['level'] == 'Petugas') echo 'selected'; ?>>Petugas</option>
-                                </select>
                             </td>
                         </tr>
                         <tr>

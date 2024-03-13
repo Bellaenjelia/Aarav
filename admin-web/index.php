@@ -26,6 +26,7 @@ include '../chat/helpers/last_chat.php';
     <link rel="apple-touch-icon" href="../assets/img/icon.png">
     <link rel="shortcut icon" href="../assets/img/icon.png">
 
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
@@ -41,7 +42,6 @@ include '../chat/helpers/last_chat.php';
     <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
    <style>
     #weatherWidget .currentDesc {
         color: #ffffff!important;
@@ -76,7 +76,6 @@ include '../chat/helpers/last_chat.php';
         #cellPaiChart{
             height: 160px;
         }
-
     </style>
 </head>
 
@@ -164,6 +163,7 @@ include '../chat/helpers/last_chat.php';
                 include '404.php';
             }
             ?>
+        </div>
         <div class="clearfix"></div>
         <!-- Footer -->
         <footer class="site-footer">
