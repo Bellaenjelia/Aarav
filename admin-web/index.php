@@ -1,8 +1,8 @@
 <?php
 include '../authentication/koneksi.php';
 
-if (!isset($_SESSION['user']['id_pengelola']) || !isset($_SESSION['user']['id_guru'])) {
-    header('location:../authentication/login.php');
+if (!isset($_SESSION['user'])) {
+  header('location:../authentication/login.php');
 }
 include '../chat/helpers/user.php';
 include '../chat/helpers/percakapan.php';
