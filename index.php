@@ -1,7 +1,7 @@
 <?php
 include 'authentication/koneksi.php';
 
-if (!isset($_SESSION['user'])) {
+if (!isset($_SESSION['user']['id_siswa'])) {
   header('location:authentication/login.php');
 }
 // Chat PHP Files
